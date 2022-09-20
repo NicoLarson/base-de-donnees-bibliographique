@@ -46,11 +46,39 @@ Puis lancez la commande
 node app.js 
 ```
 
-L'application créera un fichier JSON nommé db puis la date de création, contenant un objet documents avec les bibliographies.
+L'application créera un fichier JSON nommé db puis la date de création, contenant notre base de données bibliographique.
+
+Nous allons déployer en utilisant Heroku
 
 ## Creation d'une API open source
 
 - Créer un compte [Heroku](https://www.heroku.com/)
+
+Initialiser un projet car nous allons utiliser un peut de back end afin de pouvoir utiliser notre fichier json.
+
+```bash
+npm init
+```
+
+Vous pouvez remplir ou non les informations demandés
+
+Installez un serveur json pour que Heroku sache de quoi nous avons besoin
+
+```bash
+npm i json-server
+```
+
+Nous allons ajouter la ligne `"start": "node server.js"` dans le fichier package.json.
+
+```json
+// ...
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+// ...
+```
 
 ## Installation
 
