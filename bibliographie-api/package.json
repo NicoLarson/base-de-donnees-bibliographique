@@ -1,0 +1,19 @@
+{
+  "name": "bibliographie-api",
+  "version": "1.0.0",
+  "description": "Base de données bibliographique",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "database",
+    "noqsl",
+    "biblio"
+  ],
+  "author": "Nicolas Yang",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}

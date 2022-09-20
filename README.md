@@ -35,11 +35,11 @@ Création d'une api pour accéder à des documents bibliographiques
 ### Exporter la bibliographie en CSV
 
 Dans `fichier` cliquez sur `Exporter la bibliothèque...`
-Sélectionnez le format CSV puis enregistrez le dans le dossier `Convert_CSV_to_JSON`.
+Sélectionnez le format CSV puis enregistrez le dans le dossier `convert-csv-to-json`.
 
 ### Convertir le fichier CSV en JSON
 
-Allez dans le dossier `Convert_CSV_to_JSON`.
+Allez dans le dossier `convert-csv-to-json`.
 Puis lancez la commande
 
 ```bash
@@ -49,6 +49,8 @@ node app.js
 L'application créera un fichier JSON nommé db puis la date de création, contenant un objet documents avec les bibliographies.
 
 ## Creation d'une API open source
+
+- Créer un compte [Heroku](https://www.heroku.com/)
 
 ## Installation
 
