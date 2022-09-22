@@ -80,6 +80,46 @@ Nous allons ajouter la ligne `"start": "node server.js"` dans le fichier package
 // ...
 ```
 
+Nous allons créer le fichier `server.js` pour utiliser notre server.
+
+```js
+const jsonServer = require('json-server');
+const server = jsonServer.create();
+const router = jsonServer.router('db.json');
+const middlewares = jsonServer.defaults();
+const port = process.env.PORT || 3000;
+
+server.use(middlewares);
+server.use(router);
+server.listen(port, () => {
+    console.log('JSON Server is running');
+});
+```
+
+Copier le fichier du dossier `./convert-csv-to-json/output` dans `./bibliographie-api` et renommez le en `db.json`.
+
+## HEROKU
+
+Vous êtes inscrit chez Heroku.
+Installez l'[interface de ligne de commande d'Heroku](https://devcenter.heroku.com/articles/heroku-cli).
+
+```bash
+npm install -g heroku
+```
+
+### Créer notre API
+
+```npm
+npx heroku create bibliographie-api
+```
+
+Une fenetre pour autentification va apparaitre.
+Identifiez vous.
+
+On peut maintenant pousser notre api chez Heroku.
+```bash
+git push heroku main
+```
 ## Installation
 
 ```sh
