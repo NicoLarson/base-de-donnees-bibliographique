@@ -113,20 +113,43 @@ npm install -g heroku
 npx heroku create bibliographie-api
 ```
 
-Une fenetre pour autentification va apparaitre.
+Une fenêtre pour authentification va apparaître.
 Identifiez vous.
 
 On peut maintenant pousser notre api chez Heroku.
+
 ```bash
 git push heroku main
 ```
-## Installation
 
-```sh
-git push heroku main
-```
+___
 
 ## Mise à jour
+
+- Collectez vos données via le [connecteur Zotero chrome](https://www.zotero.org/download/).
+- Cliquez sur l’icône du connecteur Zotero
+![Zotero connector icon](img/zotero-connector.png)
+
+- Une fenêtre apparaît
+- ![Fenêtre Zotero](img/zotero-connector-window.png)
+- Sélectionner les documents désirés puis cliquez sur OK
+- Les documents seront insérer dans le logiciel
+
+### Exporter la bibliographie en CSV
+
+Dans `fichier` cliquez sur `Exporter la bibliothèque...`
+Sélectionnez le format CSV puis enregistrez le dans le dossier `convert-csv-to-json`.
+
+### Convertir le fichier CSV en JSON
+
+Allez dans le dossier `convert-csv-to-json`.
+Puis lancez la commande
+
+```bash
+node app.js 
+```
+
+L'application créera un fichier JSON nommé db puis la date de création, contenant notre base de données bibliographique.
 
 ## Auteur
 
